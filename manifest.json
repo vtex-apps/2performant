@@ -1,9 +1,9 @@
 {
-  "name": "CHANGEME",
+  "name": "twoperformant",
   "vendor": "vtex",
   "version": "0.0.1",
-  "title": "CHANGEME",
-  "description": "CHANGEME",
+  "title": "2performant",
+  "description": "",
   "billingOptions": {
     "termsURL": "",
     "support": {
@@ -20,12 +20,17 @@
     "vtex.pixel-interfaces": "1.x"
   },
   "settingsSchema": {
-    "title": "APP NAME",
+    "title": "2performant",
     "type": "object",
     "properties": {
-      "gtmId": {
-        "title": "SAMPLE FIELD",
-        "description": "Enter the ID (GTM-XXXX) from your Google Tag Manager",
+      "confirm": {
+        "title": "Confirm",
+        "description": "You received it by e-mail",
+        "type": "string"
+      },
+      "campaignUnique": {
+        "title": "Campaign Unique",
+        "description": "You received it by e-mail",
         "type": "string"
       }
     }
