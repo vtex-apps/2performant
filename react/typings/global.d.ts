@@ -1,3 +1,6 @@
 interface Window extends Window {
-  dataLayer: any[]
+  __2performant: {
+    confirm: string
+    campaignUnique: string
+  }
 }
