@@ -27,10 +27,11 @@ export function handleEvents(e: PixelMessage) {
       createIFrame({
         confirm: window.__2performant.confirm,
         campaignUnique: window.__2performant.campaignUnique,
-        amount: e.data.transactionSubtotal,
+        amount: e.data.transactionTotal,
         description: productNames(e.data.transactionProducts),
         transactionId: e.data.transactionId,
       })
+      return
     }
     default: {
       return
@@ -39,7 +40,7 @@ export function handleEvents(e: PixelMessage) {
 }
 
 function productNames(products: ProductOrder[]): string {
-  const productNames = products.map((product) => product.name)
+  const productNames = products.map(product => product.name)
   return productNames.join(', ')
 }
 
