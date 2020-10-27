@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+- Changed the discount to absolute value to correct error from 0.1.3.
+
 ## [0.1.3] - 2020-10-13
 
 ### Fixed
