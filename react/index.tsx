@@ -28,7 +28,7 @@ export function handleEvents(e: PixelMessage) {
       createIFrame({
         confirm: window.__2performant.confirm,
         campaignUnique: window.__2performant.campaignUnique,
-        amount: e.data.transactionTotal - Math.abs(e.data.transactionDiscounts) - e.data.transactionTax - e.data.transactionShipping,
+        amount: e.data.transactionTotal - e.data.transactionTax - e.data.transactionShipping,
         description: productNames(e.data.transactionProducts),
         transactionId: e.data.transactionId,
       })
