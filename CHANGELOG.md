@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+- Fixed discounts applying twice to amount
+
 ## [0.1.4] - 2020-10-27
 
 ### Fixed
