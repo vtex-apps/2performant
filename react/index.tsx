@@ -21,14 +21,19 @@ function createIFrame(params: Params) {
   document.body.appendChild(iframe)
 }
 
-
 export function handleEvents(e: PixelMessage) {
   switch (e.data.eventName) {
     case 'vtex:orderPlaced': {
+      let tax = e.data.transactionTax
+      let totalWithoutShip = e.data.transactionTotal - e.data.transactionShipping
+
+      if (!tax && window.__2performant.subtractTVA)
+        tax = +(0.19 * totalWithoutShip).toFixed(2)
+
       createIFrame({
         confirm: window.__2performant.confirm,
         campaignUnique: window.__2performant.campaignUnique,
-        amount: e.data.transactionTotal - e.data.transactionTax - e.data.transactionShipping,
+        amount: +(totalWithoutShip - tax).toFixed(2),
         description: productNames(e.data.transactionProducts),
         transactionId: e.data.transactionId,
       })
