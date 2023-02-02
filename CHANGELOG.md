@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.7] - 2023-02-02
+
 ### Added 
 - Setting to subtract 19% taxes if transactionTax is undefined 
 
