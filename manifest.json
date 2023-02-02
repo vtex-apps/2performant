@@ -29,6 +29,12 @@
         "description": "You received it by e-mail",
         "type": "string"
       },
+      "subtractTVA": {
+        "title": "Subtract 19% TVA from total order",
+        "description": "If this is checked then 19% will be subtracted from the total",
+        "type": "boolean",
+        "default": false
+      },
       "campaignUnique": {
         "title": "Campaign Unique",
         "description": "You received it by e-mail",
